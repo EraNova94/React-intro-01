@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card.css";
 const Card = ({ item }) => {
-  console.log(item);
+  // console.log(item);
   return (
     <div>
       <h2>{item.model}</h2>
