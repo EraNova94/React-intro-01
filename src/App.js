@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import List from "./components/List/List";
@@ -31,9 +31,33 @@ const App = () => {
       id: 4,
     },
   ];
+  const [carsList, setCarsList] = useState(cars);
+  // variables
+  // let counter = 0;
+  // function increment() {
+  //   counter++;
+  //   console.log(counter);
+  // }
+  // increment();
+  // function decrement() {
+  //   counter--;
+  //   console.log(counter);
+  // }
+  // decrement();
+  //! useState
+  // const myHook = useState("null");
+  // console.log(myHook);
+  const [state, setState] = useState(0);
+  console.log(state);
   return (
     <div>
-      <Header logo={logo} name={"Erkinbek"} age={28} />
+      {/* <button onClick={() => decrement()}>-</button>
+      <span>{counter}</span>
+      <button onClick={() => increment()}>+</button> */}
+      {/* <button onClick={() => setState(state - 1)}>-</button>
+      <span>{state}</span>
+      <button onClick={() => setState(state + 1)}>+</button> */}
+      <Header cars={cars} logo={logo} name={"Erkinbek"} age={28} />
       <List cars={cars} />
       <Footer />
     </div>
